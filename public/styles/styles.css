@@ -101,7 +101,7 @@ body {
   letter-spacing: 4.2px;
 }
 div {
-  margin-top: 3%;
+  position: static;
 }
 div img {
   display: none;

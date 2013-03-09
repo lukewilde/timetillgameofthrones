@@ -8,10 +8,9 @@ function keepSize($content, $logo, $text){
       $text.css({ fontSize: windowsWidth / 25 });
       $logo.css({ width: windowsWidth / 1.6 });
 
-      var top = ($(window).height() - $content.height()) / 2
-        , left = (windowsWidth - $content.width()) / 2;
+      var top = ($(window).height() - $content.height()) / 3
 
-      $content.css({ top: top, left: left, fontSize: windowsWidth / 7 });
+      $content.css({ marginTop: top });
     }
 
     redraw()
