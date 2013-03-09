@@ -1,11 +1,16 @@
 (function($){
 
-  $.fn.countdown = function(year, month, day, hour, minute, second, endtext) {
+  $.fn.countdown = function(year, month, day, hour, minute, second, endtext, onTick) {
 
     var end = new Date(year,month,day,hour,minute,second);
 
     return this.each(function() {
-      $(this).text(calculateTimeleft())
+      setInterval(function() {
+        $(this).text(calculateTimeleft())
+        // if (typeof onTick === 'function') {
+        //   onTick()
+        // }
+      }, 1000)
     });
 
     function calculateTimeleft() {
