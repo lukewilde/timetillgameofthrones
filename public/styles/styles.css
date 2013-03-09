@@ -95,17 +95,18 @@ td {
 a img {
   border: none;
 }
-div {
-  margin-left: 50px;
-}
 body {
   background-color: #000;
   font-family: Impact, Charcoal, sans-serif;
   letter-spacing: 4.2px;
 }
-div img,
-div h1 {
+div {
   margin-top: 3%;
+}
+div img {
+  display: none;
+}
+div h1 {
   font-size: 3em;
   color: #a00;
   font-weight: 100;
