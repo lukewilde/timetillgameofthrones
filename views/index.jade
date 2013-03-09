@@ -10,33 +10,16 @@ html
       h1
 
   script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-  script(src='/js/countdown.jquery.js', type='text/javascript')
+  script(src='/js/app.js')
+  script(src='/js/countdown.jquery.js')
   script
 
     if (typeof jQuery === 'undefined') {
       document.write('<script src="/js/lib/jquery-1.9.1.min.js" />')
     }
 
-    var $text = $('h1')
-      , $logo = $('img').show()
-      , $content = $('.content')
+    keepSize($('.content'), $('img'), $('h1'))
 
     $(function () {
-      $text.countdown(2013, 04, 01, 9, 0, 0, 'Game of Thrones!!')
+      $('h1').countdown(2013, 04, 01, 9, 0, 0, 'Game of Thrones!!')
     })
-
-    function redraw() {
-
-      var windowsWidth = $(window).width();
-      $text.css({ fontSize: windowsWidth / 25 });
-      $logo.css({ width: windowsWidth / 1.6 });
-
-
-      var top = ($(window).height() - $content.height()) / 2
-        , left = (windowsWidth - $content.width()) / 2;
-
-      $content.css({ top: top, left: left, fontSize: windowsWidth / 7 });
-    }
-
-    redraw()
-    $(window).on('resize', redraw);
