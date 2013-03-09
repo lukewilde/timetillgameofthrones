@@ -99,10 +99,11 @@ div {
   margin-left: 50px;
 }
 body {
+  background-color: #000;
   font-family: Impact, Charcoal, sans-serif;
   letter-spacing: 4.2px;
 }
-div h2 {
+div h1 {
   font-size: 3em;
   color: #a00;
   margin-top: 750px;

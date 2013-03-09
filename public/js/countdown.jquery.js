@@ -5,8 +5,14 @@
     var end = new Date(year,month,day,hour,minute,second);
 
     return this.each(function() {
+
+      var $self = $(this)
+
+      $self.text(calculateTimeleft())
+
       setInterval(function() {
-        $(this).text(calculateTimeleft())
+        // console.log(calculateTimeleft())
+        $self.text(calculateTimeleft())
         // if (typeof onTick === 'function') {
         //   onTick()
         // }
