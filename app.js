@@ -25,4 +25,6 @@ app.get('/', function (req, res) {
   )
 })
 
+console.log('Server running on http://localhost:8890:')
+
 app.listen(8890)
